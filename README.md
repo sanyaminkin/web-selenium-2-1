@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ofi2jkppf4xan7rd?svg=true)](https://ci.appveyor.com/project/sanyaminkin/web-selenium-2-1)
