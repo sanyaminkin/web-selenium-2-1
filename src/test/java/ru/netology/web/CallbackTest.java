@@ -36,13 +36,13 @@ public class CallbackTest {
     }
 
     @Test
-    void PositiveTest1() {
+    void positiveTest1() {
         driver.get("http://localhost:9999");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Сергей Иванов-Петров");
         driver.findElement(By.cssSelector("[data-test-id=\"phone\"] input")).sendKeys("+79991112233");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button")).click();
-        String actualText = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
+        String actualText = driver.findElement(By.cssSelector("[data-test-id=\"order-success\"]")).getText();
         String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         assertEquals(expectedText.trim(), actualText.trim());
     }
